@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>G9PGBI</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <<link rel="stylesheet" type="text/css" href="static.styles/html_style.css">
+        <link rel="stylesheet" type="text/css" href="newstyle.css">
     </head>
     <body>
-        <div th:insert="~{topbar::topbar}"></div>
+        <div>
+        <h1>Futóversenykezelő Alkalmazás</h1>
+        <hr />
+        </div>
         <!--<div class="row">-->
             <div id="indexLeftColumn" style="background-color:#ddd;">
-                <h2>Adatbevitel</h2>
+                <h2> Adatbevitel </h2>
                 <form method="get" action="uj_verseny">
                     <input name="new_comp" type="submit" value="Új verseny">
-<!--                </form>
-                <form method="get" action="uj_futo">-->
+                </form>
+                <br>
+                <form method="get" action="uj_futo">
                     <input name="new_run" type="submit" value="Új futó">
-<!--                </form>
-                <form method="get" action="uj_eredmeny">-->
+                </form>
+                <br>
+                <form method="get" action="uj_eredmeny">
                     <input name="new_res" type="submit" value="Új eredmények">
                 </form>
             </div>
@@ -27,11 +32,14 @@
                 <form method="get" action="keres_verseny">
                     <input type="submit" value="Verseny keresése">
                 </form>
+                <br>
                 <form method="get" action="keres_futo">
                     <input type="submit" value="Futó keresése">
                 </form>
-
             </div>
-        <!--</div>-->
+        <footer>
+            <p>Az Adatbevitel alatt tudunk új versenyt, futót vagy versenyeredményeket rögzíteni.</p>
+            <p>A Keresés egy futó vagy egy verseny adatainak megjelenítésére szolgál.</p>
+        </footer>
     </body>
 </html>
