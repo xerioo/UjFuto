@@ -1,4 +1,4 @@
-package kferi.Futoverseny;
+package GDE.startup.futo;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
@@ -7,24 +7,24 @@ import java.util.concurrent.TimeUnit;
 @Entity
 public class Result {
     @ManyToOne
-    private Runner runner;
+    private int runner;
     @ManyToOne
-    private Competition competition;
+    private int competition;
     private long resultInMillisec;
 
-    public Runner getRunner() {
+    public int getRunner() {
         return runner;
     }
 
-    public void setRunner(Runner runner) {
+    public void setRunner(int runner) {
         this.runner = runner;
     }
 
-    public Competition getCompetition() {
+    public int getCompetition() {
         return competition;
     }
 
-    public void setCompetition(Competition competition) {
+    public void setCompetition(int competition) {
         this.competition = competition;
     }
 

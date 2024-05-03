@@ -1,25 +1,27 @@
-
-package kferi.Futoverseny;
+package GDE.startup.futo;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import java.util.List;
 
 @Entity
 public class Runner {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
     private String name;
     private int age;
     private int gender;
     
-    public static final String[] genderTypes = {"n/a", "fÃ©rfi", "nÅ‘"};
+    public static final String[] genderTypes = {"n/a", "férfi", "nõ"}; //az int 0, 1, 2 értékhez tartozó adatok
 
-    public Long getId() {
+    public int getId() {
         return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
