@@ -21,9 +21,9 @@ public class FutoApplication {
         public static ArrayList<Competition> competitions = new ArrayList<>();
             
 	public static void main(String[] args) {
-		//SpringApplication.run(FutoApplication.class, args);
-            CsvImporter.fillDatabase();
-            CsvImporter.loadData();
+            SpringApplication.run(FutoApplication.class, args);
+            //CsvImporter.fillDatabase();
+            //CsvImporter.loadData();
 	}
         
       

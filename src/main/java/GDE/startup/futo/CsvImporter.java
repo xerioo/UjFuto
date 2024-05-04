@@ -27,6 +27,8 @@ public class CsvImporter {
             
             String projectDir = System.getProperty("user.dir");
             projectDir += "/src/main/resources/";
+            //a versenyek és a futók internetes táblázatokból származnak,
+            //az eredmények pedig véletlengenerátorral készültek
             String runnerPath = projectDir+"runners.csv";
             String compPath = projectDir+"competitions.csv";
             String resPath = projectDir+"results.csv";
@@ -38,8 +40,9 @@ public class CsvImporter {
     }    
     
     public void readRunnersFromFile (String csvFile) {
-
-        if (CreateTable("runnerdb")) {  //if table exists it returns false so the same data is not added again
+        
+        //ha létezik a tábla az adatbázisban, false jön vissza, hogy ne kerüljenek be duplán az adatok
+        if (CreateTable("runnerdb")) {  
             try (Connection connection = DriverManager.getConnection(jdbcUrl, jdbcUsername, jdbcPassword);
                  BufferedReader br = new BufferedReader(new FileReader(csvFile,ekezet))) {
 
